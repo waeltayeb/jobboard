@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title> Register </title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style1.css" />
+    
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <header>
+        <nav>
+            <ul class="sidebar">
+              <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+              
+              <li><a href="/">Home</a></li>
+              <li><a href="/login">Login</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">JOBBOARD</a></li>
+              
+              <li class="hideOnMobile"><a href="/">Home</a></li>
+              <li class="hideOnMobile"><a href="/login">Login</a></li>
+              <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+            </ul>
+          </nav>
+          <script>
+            function showSidebar(){
+              const sidebar = document.querySelector('.sidebar')
+              sidebar.style.display = 'flex'
+            }
+            function hideSidebar(){
+              const sidebar = document.querySelector('.sidebar')
+              sidebar.style.display = 'none'
+            }
+          </script>
+    </header>
+
+    <form id="registrationForm" method="post" action="/register">
+      <h3>Register Now</h3>
+      <label for="name">Name</label>
+      <input type="text" placeholder="John" id="name" name="name" required>
+      <label for="prename">Prename</label>
+      <input type="text" placeholder="Doe" id="prename" name="prename" required>
+      <label for="email">Email</label>
+      <input type="email" placeholder="Email" id="email" name="email" required>
+  
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password" name="password" required>
+      <label for="co-password">Confirm Password</label>
+      <input type="password" placeholder="Confirm Password" id="co-password" name="co-password" required>
+      <button type="submit">Register</button>
+      <div class="social">
+          <div class="go"><i class="fab fa-google"></i> Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+      </div>
+  </form>
+  
+  <script>
+    const form = document.getElementById('registrationForm');
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('co-password');
+
+    form.addEventListener('submit', function(event) {
+        if (passwordInput.value !== confirmPasswordInput.value) {
+            alert('Passwords do not match');
+            event.preventDefault(); // Prevent form submission
+        }
+    });
+</script>
+</body>
+</html>

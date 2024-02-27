@@ -1,0 +1,343 @@
+.jobs-list-container {
+  width: 60%;
+  margin-top: 20px ; 
+  margin-left: 10%;
+  font-family: "Rubik", sans-serif;
+}
+body{
+  background-color: #f6f4fa;
+}
+
+.jobs-list-container h2 {
+  font-size: 30px;
+  border-left: 4px solid #023047;
+  padding-left: 20px;
+}
+
+.jobs-list-container .jobs {
+  display: contents;
+  width: 70%;
+}
+
+
+
+.jobs-list-container .job {
+  box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+  padding: 24px;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 400ms ease;
+}
+
+.jobs-list-container .job:hover {
+  transform: scale(1.03);
+}
+
+
+
+
+@media (max-width: 940px) {
+  .jobs-list-container .jobs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .jobs-list-container .jobs {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+
+nav{
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+nav ul{
+  width: 80%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 50px;
+}
+nav a{
+  height: 100%;
+  padding: 0 50px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.sr{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.btn{
+  padding: 9px 25px ;
+  margin-left: 10px;
+  margin-right: 5px;
+  background-color: rgba(0, 136,169, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.btn:hover{
+  background-color: rgba(0, 136,169, 0);
+}
+.search{
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+nav a:hover{
+  background-color: #f0f0f0;
+}
+nav li:first-child{
+  margin-right: auto;
+}
+.sidebar{
+  position: fixed;
+  top: 0; 
+  right: 0;
+  height: auto;
+  width: 100%;
+  background-color: rgb(0 93 255 / 39%);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 9999;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.menu-button{
+  display: none;
+}
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
+}
+
+ 
+
+   
+
+   
+  .form-group {
+    display: flex; }
+    .form-group input {
+      width: 50%; }
+      .form-group input:first-child {
+        margin-right: 25px; }
+   
+  .form-wrapper {
+    position: relative; }
+    .form-wrapper i {
+      position: absolute;
+      bottom: 9px;
+      right: 0; }
+   
+  .form-control {
+    border: 1px solid #333;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    display: block;
+    width: 50%;
+    height: 30px;
+    padding: 5px;
+    margin-bottom: 25px; 
+}
+    .form-control::-webkit-input-placeholder {
+      font-size: 14px;
+      color: gray;
+      font-family: arial; }
+      textarea {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+      }
+      
+      textarea {
+        padding: 10px;
+        max-width: 95%;
+        line-height: 1.5;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 1px #999;
+      }
+     
+  select {
+    font-size: 14px;
+    font-family: arial;
+    cursor: pointer;
+    padding-left: 20px; 
+    color: gray;
+}
+    select option[value=""][disabled] {
+      display: none; }
+   
+  button, .btnEdit {
+    border: none;
+    width: 164px;
+    height: 51px;
+    margin: auto;
+    margin-top: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #333;
+    font-size: 15px;
+    color: #fff;
+  }
+
+  button:hover{
+    background: or;
+  }
+   
+  @media (max-width: 767px) {
+    .inner {
+      display: block; }
+      .inner .image-holder {
+        width: 100%; }
+      .inner form {
+        width: 100%;
+        padding: 40px 0 30px; }
+   
+    button{
+      margin-top: 60px; } }
+      nav{
+        background-color: white;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        width: 100%;
+      }
+      nav ul{
+        width: 80%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      nav li{
+        height: 50px;
+      }
+      nav a{
+        height: 100%;
+        padding: 0 50px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+      }
+      .sr{
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+      }
+      .btn{
+        padding: 9px 25px ;
+        margin-left: 10px;
+        margin-right: 5px;
+        background-color: rgba(0, 136,169, 1);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+      }
+      .btn:hover{
+        background-color: rgba(0, 136,169, 0);
+      }
+      .search{
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+      }
+      nav a:hover{
+        background-color: #f0f0f0;
+      }
+      nav li:first-child{
+        margin-right: auto;
+      }
+      .sidebar{
+        position: fixed;
+        top: 0; 
+        right: 0;
+        height: auto;
+        width: 100%;
+        background-color: rgb(0 93 255 / 39%);
+        backdrop-filter: blur(12px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        z-index: 9999;
+      }
+      .sidebar li{
+        width: 100%;
+      }
+      .sidebar a{
+        width: 100%;
+      }
+      .menu-button{
+        display: none;
+      }
+      @media(max-width: 800px){
+        .hideOnMobile{
+          display: none;
+        }
+        .menu-button{
+          display: block;
+        }
+      }
+      @media(max-width: 400px){
+        .sidebar{
+          width: 100%;
+        }
+      }

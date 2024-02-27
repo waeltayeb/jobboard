@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styleJob.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960"
+              width="26">
+              <path
+                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+            </svg></a></li>
+        <li><a href="/dashboard">dashboard</a></li>
+        <li><a href="/addjob">add job</a></li>
+        <li><a href="/logout">logout</a></li>
+      </ul>
+      <ul>
+        <li><a href="/dashboard">JOBBOARD</a></li>
+        <li class="hideOnMobile"><a href="/dashboard">dashboard</a></li>
+        <li class="hideOnMobile"><a href="/addjob">add job</a></li>
+        <li class="hideOnMobile"><a href="/logout">logout</a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+              viewBox="0 96 960 960" width="26">
+              <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+            </svg></a></li>
+      </ul>
+    </nav>
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+      }
+    </script>
+  </header>
+  <div class="jobs-list-container">
+
+    <h2>Add New Jobs</h2>
+    <div class="jobs">
+      <div class="job">
+        <form action="/updateJob/<%= job.id %>" method="post">
+          <h3>Edit job </h3>
+          <div class="form-group">
+            <input type="text" id="title" name="title" value="<%= job.title %>" class="form-control">
+            <input type="number" id="numberOfPositions" name="numberOfPositions" value="<%= job.nbr_postion %>" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" id="jobType" name="jobType" value="<%= job.type_contrat %>" class="form-control">
+            <input type="number" id="experience" name="experience" value="<%= job.nbr_exprience %>" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="expirationDate" class="form-control">expiration date: <%= job.date_exp %>
+              
+             
+          </label>            
+
+          </div>
+
+
+          <div class="form-wrapper">
+            <label for="jobDescription">job Description:</label>
+          </div>
+          <textarea id="jobDescription" name="jobDescription" rows="15" cols="500">
+            <%= job.description %>
+            </textarea>
+
+          <div class="form-wrapper">
+
+            <label for="jobRequirements">job requirements</label>
+          </div>
+          <textarea id="jobRequirements" name="jobRequirements" rows="15" cols="500">
+            <%= job.requirement %>
+            </textarea>
+
+      </div>
+
+      <button type="submit" > EDIT </button>
+      </form>
+    </div>
+  </div>
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>

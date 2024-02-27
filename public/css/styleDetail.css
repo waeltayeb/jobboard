@@ -1,0 +1,231 @@
+.jobs-list-container {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: "Rubik", sans-serif;
+}
+body{
+  background-color: #f6f4fa;
+}
+
+.jobs-list-container h2 {
+  font-size: 30px;
+  border-left: 4px solid #023047;
+  padding-left: 20px;
+}
+
+.jobs-list-container .jobs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.jobs-list-container .jobs img {
+  width: 60px;
+}
+
+.jobs-list-container .job {
+  box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+  padding: 24px;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 400ms ease;
+}
+
+.jobs-list-container .job:hover {
+  transform: scale(1.03);
+}
+
+.jobs-list-container .open-positions {
+  position: absolute;
+  top: 40px;
+  right: 24px;
+  color: #e63946;
+}
+
+.jobs-list-container .job-title {
+  font-size: 20px;
+  padding: 10px 0;
+  margin: 0;
+  color: #023047;
+}
+
+.jobs-list-container .details {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.8;
+  flex: 1;
+}
+
+.jobs-list-container .details-btn {
+  text-decoration: none;
+  border: 1px solid #023047;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+  transition: all 400ms ease;
+}
+
+.jobs-list-container .details-btn:hover {
+  background: #023047;
+  color: #fff;
+}
+
+.jobs-list-container .job-search {
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 940px) {
+  .jobs-list-container .jobs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .jobs-list-container .jobs {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+
+nav{
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+nav ul{
+  width: 80%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 50px;
+}
+nav a{
+  height: 100%;
+  padding: 0 50px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.sr{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.btn{
+  padding: 9px 25px ;
+  margin-left: 10px;
+  margin-right: 5px;
+  background-color: rgba(0, 136,169, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.btn:hover{
+  background-color: rgba(0, 136,169, 0);
+}
+.search{
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+nav a:hover{
+  background-color: #f0f0f0;
+}
+nav li:first-child{
+  margin-right: auto;
+}
+.sidebar{
+  position: fixed;
+  top: 0; 
+  right: 0;
+  height: auto;
+  width: 100%;
+  background-color: rgb(0 93 255 / 39%);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 9999;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.menu-button{
+  display: none;
+}
+.divheader, .content{
+  width: 60%;
+  margin-left: 10%;
+  box-shadow: gray;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: white;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 10px; 
+  margin: 5px;
+}
+
+.grid-item {
+  background-color: #ddd;
+  padding: 1px 1px 1px 20px;
+  
+}
+.del_edit{
+  
+  color:rgb(255, 255, 255);
+   border: 0;
+    width: 60px;
+}
+
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
+}
+

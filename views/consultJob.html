@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styleDetail.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+          <li><form class="sr">
+            <input class="search"  placeholder="Search" aria-label="Search">
+            <button class="btn" type="submit">Search</button>
+          </form></li>
+          <li><a href="/dashboard">dashboard</a></li>
+          <li><a href="/newJob">add job</a></li>
+          <li><a href="/logout">logout</a></li>
+        </ul>
+        <ul>
+          <li><a href="/dashboard">JOBBOARD</a></li>
+          <li class="hideOnMobile"> <form class="sr">
+            <input class="search"  placeholder="Search" aria-label="Search">
+            <button class="btn" type="submit">Search</button>
+          </form></li>
+          <li class="hideOnMobile"><a href="/dashboard">dashboard</a></li>
+          <li class="hideOnMobile"><a href="/newJob">add job</a></li>
+          <li class="hideOnMobile"><a href="/logout">logout</a></li>
+          <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+        </ul>
+      </nav>
+      <script>
+        function showSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'none'
+        }
+      </script>
+  </header>
+    <div class="divheader">
+      <div class="grid-container">
+        <div class="grid-item"><h3><%= job.title %></h3><h5><%= user.name %> <%= user.prename %></h5></div>
+    </div>
+      <div class="grid-container">
+        <div class="grid-item"><h3><%= job.nbr_postion %> open position</h3></div>
+        <div class="grid-item"><h3>Type of job:</h3><h5><%= job.type_contrat %></h5></div>
+        <div class="grid-item"><h3>experience:</h3><h5> <%= job.nbr_exprience %> year</h5></div>
+    </div>
+    </div>
+    <div class="content">
+      <h3>Description de l'emploi:</h3>
+      <p><%= job.description %></p>
+      <h3>Exigences de l'emploi</h3>
+      <p><%= job.requirement %></p>
+        <h3>Date d'expiration</h3>
+        <h1><%= job.date_exp %></h1>
+
+    </div>
+    <div class="divheader">
+      <div class="grid-container">
+        <div class="grid-item"  style="background-color: green; color: white; text-align: center; padding: 20px; "><a href="/job/<%= job.id %>" class="del_edit" style="background-color: green;">edit</a></div>
+        <div class="grid-item"  style="background-color: red; color: white;text-align: center; padding: 20px;"><a href="/deleteJob/<%= job.id %>" class="del_edit" style="background-color: red;">delete</a></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
